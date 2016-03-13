@@ -3,6 +3,29 @@
 <!doctype html>
 <html ng-app="todoApp">
   <head>
+     <style type="text/css">
+.slash {
+	background-image: url(/spring/images/slash.png);
+	background-size: 100% 100%;
+	text-align: left;
+}
+.backslash {
+	background-image: url(/spring/images/backslash.png);
+	background-size: 100% 100%;
+	text-align: left;
+}
+.slash div, .backslash div { text-align: right; }
+table {
+	border-collapse: collapse;
+	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+}  
+th, td {
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+	padding: 5px;
+}
+</style>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="todo.js"></script>
     <link rel="stylesheet" href="todo.css">
@@ -26,5 +49,29 @@
         <input class="btn-primary" type="submit" value="add">
       </form>
     </div>
+    
+ <table>
+<tr>
+	<th class='backslash' style='width:60px'><div>요일</div>교시</th>
+	<th>월</th>
+	<th>화</th>
+	<th>수</th>
+	<th>목</th>
+</tr>
+<tr>
+	<td>1</td>
+	<td>국어</td>
+	<td>영어</td>
+	<td>수학</td>
+	<td>미술</td>
+</tr>
+<tr>
+	<td>2</td>
+	<td>사회</td>
+	<td>체육</td>
+	<td>국사</td>
+	<td class='slash'>H<div>R</div></td>
+</tr>
+</table>
   </body>
 </html>
